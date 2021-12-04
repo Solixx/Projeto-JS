@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="pt"> 
+<head> 
+    <title>SI | JS</title> 
+    <meta charset="utf-8"/> 
+    <script type="text/javascript" src="bin.js"></script> 
+</head> 
+<body> 
+    <div>
+        <input type="text" id="ip1" style="width: 30px;"/>. 
+        <span id="invalid" style="color:brown; font-size: 12px;"></span> 
+    </div> 
+    <div>
+        <select id="select">
+            <option value="2">Binário</option>
+            <option value="8">Octal</option>
+            <option value="16">Hexadecimal</option>
+        </select>
+    </div>
+    <div> 
+        <button onclick="convert();">Converter</button>
+        <button onclick="random();">Random</button>
+    </div> 
+    <p id="conversao">Conversão: </p> 
+
+
+    <div id="binario"style="display: none;">
+        <div>
+            <select id="select_bin">
+                <option value="-1">None</option>
+                <option value="8">Octal</option>
+                <option value="10">Decimal</option>
+                <option value="16">Hexadecimal</option>
+            </select>
+        </div>
+        <div> 
+            <button onclick="convert2();">Converter</button>
+        </div> 
+        <p id="conversao2">Conversão: </p> 
+    </div>
+
+    <div id="octal" style="display: none;">
+        <div>
+            <select id="select_oct">
+                <option value="-1">None</option>
+                <option value="2">Binário</option>
+                <option value="10">Decimal</option>
+                <option value="16">Hexadecimal</option>
+            </select>
+        </div>
+        <div> 
+            <button onclick="convert2();">Converter</button>
+        </div> 
+        <p id="conversao3">Conversão: </p> 
+    </div>
+
+    <div id="decimal"style="display: none;">
+        <div>
+            <select id="select_dec">
+                <option value="-1">None</option>
+                <option value="2">Binário</option>
+                <option value="8">Octal</option>
+                <option value="16">Hexadecimal</option>
+            </select>
+        </div>
+        <div> 
+            <button onclick="convert2();">Converter</button>
+        </div> 
+        <p id="conversao4">Conversão: </p> 
+    </div>
+
+    <div id="hexadecimal"style="display: none;">
+        <div>
+            <select id="select_hex">
+                <option value="-1">None</option>
+                <option value="2">Binário</option>
+                <option value="8">Octal</option>
+                <option value="10">Decimal</option>
+            </select>
+        </div>
+        <div> 
+            <button onclick="convert2();">Converter</button>
+        </div> 
+        <p id="conversao5">Conversão: </p> 
+    </div>
+
+</body> 
+</html>
