@@ -106,3 +106,25 @@ function hex(){
     document.getElementById("converter").value = oct; 
 
 }
+
+function base(){
+
+    var n1 = Number(document.getElementById("resultado").value); 
+
+    var base = prompt("Insira o valor da base que quer converter");
+
+    base = Number(base);
+
+    if(base < 2 || base > 36){
+        alert("O valor da base tem de estar entre 2- 36");
+    }
+
+    else{
+
+        var oct = n1.toString(base).toUpperCase();
+                    
+        document.getElementById("converter").value = oct; 
+
+    }
+
+}
