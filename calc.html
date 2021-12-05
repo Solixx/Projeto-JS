@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +8,146 @@
     <script type="text/javascript" src="script.js"></script> 
 
     <style>
-        *{
-            margin: 0;;
+
+        *{  
+            margin: 0;
             padding: 0;
         }
+
+        body{
+            position: relative;
+            background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+            overflow: hidden;
+        }
+
+        .flex{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .opcoes{
+            display: grid;
+            grid-template-columns: repeat(2, 125px);
+            grid-template-rows: minmax(50px, auto) repeat(1, 50px);
+        }
+
+        .opcoes button{
+            cursor: pointer;
+            font-size: 1.2rem;
+            border: 1px solid white;
+            outline: none;
+            background-color: rgba(255,255,255,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(30px);
+            letter-spacing: 0.5px;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .opcoes button:hover{
+            background-color: rgba(255, 255, 255, .9);
+            background-color: rgba(255, 255, 255, .9);
+            border: 1px solid rgba(255,255,255,0.1);
+            background-image: none;
+        }
+
+        .ativo{
+            background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+            border: none !important;
+            background-color: none;
+        }
+
+        .calc{
+            display: grid;
+            grid-template-columns: repeat(2, 125px);
+            grid-template-rows: minmax(50px, auto) repeat(6, 50px);
+        }
+
+        .calc input{
+            border: 1px solid #111;
+            outline: none;
+            background-color: #111;
+            color: white;
+            transition: 0.2s;
+            text-align: center;
+        }
+
+        .calc input:hover{
+            background-color: #1a1a1a;
+        }
+
+        .calc button{
+            cursor: pointer;
+            font-size: 1.2rem;
+            border: 1px solid white;
+            outline: none;
+            background-color: rgba(255,255,255,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(30px);
+            letter-spacing: 0.5px;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .calc button:hover{
+            background-color: rgba(255, 255, 255, .9);
+        }
+
+        .span{
+            grid-column: span 1;
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            .opcoes{
+                display: grid;
+                grid-template-columns: repeat(4, 125px);
+                grid-template-rows: minmax(50px, auto) repeat(1, 50px);
+            }
+
+            .calc{
+                grid-template-columns: repeat(4, 125px);
+                grid-template-rows: minmax(50px, auto) repeat(3, 125px);
+            }
+
+            .span{
+                grid-column: span 2;
+            }
+
+        }
+
+        
+
     </style>
 
 </head>
 <body>
-    <input type="text" id="valor1">
-    <input type="text" id="valor2">
-    <input type="text" id="resultado">
-    <input type="text" id="converter">
-    <button onclick="soma();">+</button>
-    <button onclick="sub();">-</button>
-    <button onclick="mul();">*</button>
-    <button onclick="div();">/</button>
-    <button onclick="bin();">Binário</button>
-    <button onclick="oct();">Octal</button>
-    <button onclick="dec();">Decimal</button>
-    <button onclick="hex();">Hexadecimal</button>
+    <div class="flex">
+        <div class="opcoes">
+            <button onclick="calcbin();" id="btn_decimal" class="ativo span">Decimal</button>
+            <button onclick="calcoct();" id="btn_base" class="span">Base</button>
+        </div>
+        <div id="calc_dec" style="display: block;">
+            <div class="calc">
+                <input type="text" id="valor1" placeholder="Valor1">
+                <input type="text" id="valor2" placeholder="Valor2">
+                <input type="text" id="resultado" placeholder="Resultado">
+                <input type="text" id="converter" placeholder="Conversão" disabled>
+                <button onclick="soma();">+</button>
+                <button onclick="sub();">-</button>
+                <button onclick="mul();">*</button>
+                <button onclick="div();">/</button>
+                <button onclick="bin();">Binário</button>
+                <button onclick="oct();">Octal</button>
+                <button onclick="dec();">Decimal</button>
+                <button onclick="hex();">Hexadecimal</button>
+                <button onclick="random();" class="span">Random</button>
+                <button onclick="limpar();" class="span">Limpar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

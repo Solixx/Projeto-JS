@@ -1,3 +1,20 @@
+function random(){
+
+    var random_num = parseInt(Math.random()*1000);
+
+    document.getElementById("resultado").value = random_num;
+
+}
+
+function limpar(){
+
+    document.getElementById("valor1").value = "";
+    document.getElementById("valor2").value = "";
+    document.getElementById("resultado").value = "";
+    document.getElementById("converter").value = "";
+
+}
+
 function soma(){
 
     var result = Number(document.getElementById("resultado").value);
