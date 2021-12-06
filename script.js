@@ -6,12 +6,27 @@ function random(){
 
 }
 
+function random2(){
+
+    var random_num = parseInt(Math.random()*1000);
+
+    document.getElementById("dado").value = random_num;
+
+}
+
 function limpar(){
 
     document.getElementById("valor1").value = "";
     document.getElementById("valor2").value = "";
     document.getElementById("resultado").value = "";
     document.getElementById("converter").value = "";
+
+}
+
+function limpar2(){
+
+    document.getElementById("dado").value = "";
+    document.getElementById("convertido").value = "";
 
 }
 
@@ -124,6 +139,177 @@ function base(){
         var oct = n1.toString(base).toUpperCase();
                     
         document.getElementById("converter").value = oct; 
+
+    }
+
+}
+
+function convert(){
+
+    var n1 = Number(document.getElementById("dado").value); 
+    var n2 = document.getElementById("dado").value;
+    var tipo_dado = document.getElementById("tipo_dado").value;
+    var tipo_base = document.getElementById("tipo_base").value;
+
+    if(tipo_dado == 2){
+
+        if(tipo_base == 2){
+
+            const test = ~0x01
+            for(var i=n2.length-1; i>=0; --i){
+                if(test & n2[i]){ return document.getElementById("convertido").value =("Valor não binário"); }
+            }
+            return document.getElementById("convertido").value = n1;
+
+        }
+
+        else if(tipo_base == 8){
+
+            const test = ~0x01
+            for(var i=n2.length-1; i>=0; --i){
+                if(test & n2[i]){ return document.getElementById("convertido").value =("Valor não binário"); }
+            }
+            n2=parseInt(n2,2);
+            return document.getElementById("convertido").value = n2.toString(8);
+
+        }
+
+        else if(tipo_base == 10){
+
+            const test = ~0x01
+            for(var i=n2.length-1; i>=0; --i){
+                if(test & n2[i]){ return document.getElementById("convertido").value =("Valor não binário"); }
+            }
+            n2=parseInt(n2,2);
+            return document.getElementById("convertido").value = n2.toString(10);
+
+        }
+
+        else if(tipo_base == 16){
+
+            const test = ~0x01
+            for(var i=n2.length-1; i>=0; --i){
+                if(test & n2[i]){ return document.getElementById("convertido").value =("Valor não binário"); }
+            }
+            n2=parseInt(n2,2);
+            return document.getElementById("convertido").value = n2.toString(16).toUpperCase();
+
+        }
+
+    }
+
+    else if(tipo_dado == 8){
+
+        if(tipo_base == 2){
+
+           n2 = parseInt(n2,8);
+
+           n2 = n2.toString(2);
+
+            document.getElementById("convertido").value = n2;
+
+        }
+
+        else if(tipo_base == 8){
+
+            document.getElementById("convertido").value = n2;
+
+        }
+
+        else if(tipo_base == 10){
+
+            n2 = parseInt(n2,8);
+
+            n2 = n2.toString(10);
+
+            document.getElementById("convertido").value = n2;
+
+        }
+
+        else if(tipo_base == 16){
+
+            n2 = parseInt(n2,8);
+
+            n2 = n2.toString(16);
+
+            document.getElementById("convertido").value = n2;
+
+        }
+        
+
+    }
+
+    else if(tipo_dado == 10){
+
+        if(tipo_base == 2){
+
+            n1 = n1.toString(2);
+
+            document.getElementById("convertido").value = n1;
+
+        }
+
+        else if(tipo_base == 8){
+
+            n1 = n1.toString(8);
+
+            document.getElementById("convertido").value = n1;
+
+        }
+
+        else if(tipo_base == 10){
+
+            document.getElementById("convertido").value = n1;
+
+        }
+
+        else if(tipo_base == 16){
+
+            n1 = n1.toString(16);
+
+            document.getElementById("convertido").value = n1.toUpperCase();
+
+        }
+
+    }
+
+    else if(tipo_dado == 16){
+
+        if(tipo_base == 2){
+
+            n2=parseInt(n2,16);
+
+            n2= n2.toString(2);
+
+            document.getElementById("convertido").value = n2;
+
+        }
+
+        else if(tipo_base == 8){
+
+            n2=parseInt(n2,16);
+
+            n2= n2.toString(8);
+
+            document.getElementById("convertido").value = n2;
+
+        }
+
+        else if(tipo_base == 10){
+
+            n2=parseInt(n2,16);
+
+            n2= n2.toString(10);
+
+            document.getElementById("convertido").value = n2;
+
+        }
+
+        else if(tipo_base == 16){
+
+            document.getElementById("convertido").value = n2.toString(16).toUpperCase();
+
+        }
 
     }
 

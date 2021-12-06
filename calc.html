@@ -17,7 +17,10 @@
         body{
             position: relative;
             background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-            overflow: hidden;
+        }
+
+        section{
+            height: 100vh;
         }
 
         .flex{
@@ -68,6 +71,59 @@
             grid-column: span 1;
         }
 
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+        }
+
+        .form input{
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            background-color: #111;
+            color: white;
+            transition: 0.2s;
+            padding: 20px;
+            font-size: 1.5rem;
+        }
+
+        .form input:hover{
+            background-color: #1a1a1a;
+        }
+
+        .form select{
+            background-color: rgba(255,255,255,0.5);
+            border: none;
+            outline: none;
+            color: #111;
+            transition: 0.2s;
+            padding: 15px;
+            font-size: 1.5rem;
+        }
+
+        .form select:hover{
+            background-color: rgba(255, 255, 255, .9);
+        }
+
+        .form button{
+            cursor: pointer;
+            font-size: 1.2rem;
+            border: 1px solid white;
+            outline: none;
+            background-color: rgba(255,255,255,0.5);
+            border: none;
+            backdrop-filter: blur(30px);
+            letter-spacing: 0.5px;
+            transition: 0.2s;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        .form button:hover{
+            background-color: rgba(255, 255, 255, .9);
+        }
+
         @media only screen and (min-width: 768px) {
 
             .calc{
@@ -87,26 +143,53 @@
 
 </head>
 <body>
-    <div class="flex">
-        <div id="calc_dec" style="display: block;">
-            <div class="calc">
-                <input type="text" id="valor1" placeholder="Valor1">
-                <input type="text" id="valor2" placeholder="Valor2">
-                <input type="text" id="resultado" placeholder="Resultado">
-                <input type="text" id="converter" placeholder="Conversão" disabled>
-                <button onclick="soma();">+</button>
-                <button onclick="sub();">-</button>
-                <button onclick="mul();">*</button>
-                <button onclick="div();">/</button>
-                <button onclick="bin();">Binário</button>
-                <button onclick="oct();">Octal</button>
-                <button onclick="dec();">Decimal</button>
-                <button onclick="hex();">Hexadecimal</button>
-                <button onclick="base();">Base</button>
-                <button onclick="random();" class="">Random</button>
-                <button onclick="limpar();" class="span">Limpar</button>
+    <section>
+        <div class="flex">
+            <div id="calc_dec">
+                <div class="calc">
+                    <input type="text" id="valor1" placeholder="Valor1">
+                    <input type="text" id="valor2" placeholder="Valor2">
+                    <input type="text" id="resultado" placeholder="Resultado">
+                    <input type="text" id="converter" placeholder="Conversão" disabled>
+                    <button onclick="soma();">+</button>
+                    <button onclick="sub();">-</button>
+                    <button onclick="mul();">*</button>
+                    <button onclick="div();">/</button>
+                    <button onclick="bin();">Binário</button>
+                    <button onclick="oct();">Octal</button>
+                    <button onclick="dec();">Decimal</button>
+                    <button onclick="hex();">Hexadecimal</button>
+                    <button onclick="base();">Base</button>
+                    <button onclick="random();" class="">Random</button>
+                    <button onclick="limpar();" class="span">Limpar</button>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section>
+        <div class="flex">
+            <div class="form">
+                <input type="text" id="dado"/>
+                <select id="tipo_dado">
+                    <option value="-1">None</option>
+                    <option value="2">Binário</option>
+                    <option value="8">Octal</option>
+                    <option value="10">Decimal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+                <select id="tipo_base">
+                    <option value="-1">None</option>
+                    <option value="2">Binário</option>
+                    <option value="8">Octal</option>
+                    <option value="10">Decimal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+                <input type="text" id="convertido" disabled/>
+                <button onclick="convert();">Converter</button>
+                <button onclick="random2();">Random</button>
+                <button onclick="limpar2();">Limpar</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
