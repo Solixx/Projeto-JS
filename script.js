@@ -279,7 +279,7 @@ function convert(){
 
             for(var i = n2.length-1; i>= 0; i--){
                 if(n2[i] != 'a' && n2[i] != 'b' && n2[i] != 'c' && n2[i] != 'd' && n2[i] != 'e' && n2[i] != 'f' && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
-                    return document.getElementById("convertido").value = "";
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Hexadecimal";
                 }
             }
 
@@ -295,7 +295,7 @@ function convert(){
 
             for(var i = n2.length-1; i>= 0; i--){
                 if(n2[i] != 'a' && n2[i] != 'b' && n2[i] != 'c' && n2[i] != 'd' && n2[i] != 'e' && n2[i] != 'f' && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
-                    return document.getElementById("convertido").value = "";
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Hexadecimal";
                 }
             }
 
@@ -311,7 +311,7 @@ function convert(){
 
             for(var i = n2.length-1; i>= 0; i--){
                 if(n2[i] != 'a' && n2[i] != 'b' && n2[i] != 'c' && n2[i] != 'd' && n2[i] != 'e' && n2[i] != 'f' && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
-                    return document.getElementById("convertido").value = "";
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Hexadecimal";
                 }
             }
 
@@ -328,7 +328,7 @@ function convert(){
 
             for(var i = n2.length-1; i>= 0; i--){
                 if(n2[i] != 'a' && n2[i] != 'b' && n2[i] != 'c' && n2[i] != 'd' && n2[i] != 'e' && n2[i] != 'f' && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
-                    return document.getElementById("convertido").value = "";
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Hexadecimal";
                 }
             }
 
