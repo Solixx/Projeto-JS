@@ -277,6 +277,12 @@ function convert(){
 
         if(tipo_base == 2){
 
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 'a' && n2[i] != 'b' && n2[i] != 'c' && n2[i] != 'd' && n2[i] != 'e' && n2[i] != 'f' && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
+                    return document.getElementById("convertido").value = "";
+                }
+            }
+
             n2=parseInt(n2,16);
 
             n2= n2.toString(2);
@@ -286,6 +292,12 @@ function convert(){
         }
 
         else if(tipo_base == 8){
+
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 'a' && n2[i] != 'b' && n2[i] != 'c' && n2[i] != 'd' && n2[i] != 'e' && n2[i] != 'f' && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
+                    return document.getElementById("convertido").value = "";
+                }
+            }
 
             n2=parseInt(n2,16);
 
@@ -297,15 +309,28 @@ function convert(){
 
         else if(tipo_base == 10){
 
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 'a' && n2[i] != 'b' && n2[i] != 'c' && n2[i] != 'd' && n2[i] != 'e' && n2[i] != 'f' && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
+                    return document.getElementById("convertido").value = "";
+                }
+            }
+
             n2=parseInt(n2,16);
 
             n2= n2.toString(10);
 
             document.getElementById("convertido").value = n2;
+         
 
         }
 
         else if(tipo_base == 16){
+
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 'a' && n2[i] != 'b' && n2[i] != 'c' && n2[i] != 'd' && n2[i] != 'e' && n2[i] != 'f' && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
+                    return document.getElementById("convertido").value = "";
+                }
+            }
 
             document.getElementById("convertido").value = n2.toString(16).toUpperCase();
 
