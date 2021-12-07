@@ -157,7 +157,7 @@ function convert(){
 
             for(var i = n2.length-1; i>= 0; i--){
                 if(n2[i] != 0 && n2[i] != 1){
-                    return document.getElementById("convertido").value = "ERRO: Valor Não Binários";
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Binário";
                 }
             }
 
@@ -169,7 +169,7 @@ function convert(){
 
             for(var i = n2.length-1; i>= 0; i--){
                 if(n2[i] != 0 && n2[i] != 1){
-                    return document.getElementById("convertido").value = "ERRO: Valor Não Binários";
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Binário";
                 }
             }
 
@@ -182,7 +182,7 @@ function convert(){
 
             for(var i = n2.length-1; i>= 0; i--){
                 if(n2[i] != 0 && n2[i] != 1){
-                    return document.getElementById("convertido").value = "ERRO: Valor Não Binários";
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Binário";
                 }
             }
 
@@ -195,7 +195,7 @@ function convert(){
 
             for(var i = n2.length-1; i>= 0; i--){
                 if(n2[i] != 0 && n2[i] != 1){
-                    return document.getElementById("convertido").value = "ERRO: Valor Não Binários";
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Binário";
                 }
             }
             
@@ -210,9 +210,15 @@ function convert(){
 
         if(tipo_base == 2){
 
-           n2 = parseInt(n2,8);
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7){
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Octal";
+                }
+            }
 
-           n2 = n2.toString(2);
+            n2 = parseInt(n2,8);
+
+            n2 = n2.toString(2);
 
             document.getElementById("convertido").value = n2;
 
@@ -220,11 +226,23 @@ function convert(){
 
         else if(tipo_base == 8){
 
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7){
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Octal";
+                }
+            }
+
             document.getElementById("convertido").value = n2;
 
         }
 
         else if(tipo_base == 10){
+
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7){
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Octal";
+                }
+            }
 
             n2 = parseInt(n2,8);
 
@@ -235,6 +253,12 @@ function convert(){
         }
 
         else if(tipo_base == 16){
+
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7){
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Octal";
+                }
+            }
 
             n2 = parseInt(n2,8);
 
@@ -251,6 +275,14 @@ function convert(){
 
         if(tipo_base == 2){
 
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
+
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Decimal";
+
+                }
+            }
+
             n1 = n1.toString(2);
 
             document.getElementById("convertido").value = n1;
@@ -258,6 +290,14 @@ function convert(){
         }
 
         else if(tipo_base == 8){
+
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
+
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Decimal";
+
+                }
+            }
 
             n1 = n1.toString(8);
 
@@ -267,11 +307,27 @@ function convert(){
 
         else if(tipo_base == 10){
 
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
+
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Decimal";
+
+                }
+            }
+
             document.getElementById("convertido").value = n1;
 
         }
 
         else if(tipo_base == 16){
+
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1 && n2[i] != 2 && n2[i] != 3 && n2[i] != 4 && n2[i] != 5 && n2[i] != 6 && n2[i] != 7 && n2[i] != 8 && n2[i] != 9){
+
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Decimal";
+
+                }
+            }
 
             n1 = n1.toString(16);
 
