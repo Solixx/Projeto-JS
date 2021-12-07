@@ -200,7 +200,7 @@ function convert(){
             }
             
             n2=parseInt(n2,2);
-            return document.getElementById("convertido").value = n2.toString(16).toUpperCase();
+            return document.getElementById("convertido").value = n2.toString(16);
 
         }
 
@@ -331,7 +331,7 @@ function convert(){
 
             n1 = n1.toString(16);
 
-            document.getElementById("convertido").value = n1.toUpperCase();
+            document.getElementById("convertido").value = n1;
 
         }
 
@@ -396,7 +396,7 @@ function convert(){
                 }
             }
 
-            document.getElementById("convertido").value = n2.toString(16).toUpperCase();
+            document.getElementById("convertido").value = n2.toString(16);
 
         }
 
