@@ -155,20 +155,24 @@ function convert(){
 
         if(tipo_base == 2){
 
-            const test = ~0x01
-            for(var i=n2.length-1; i>=0; --i){
-                if(test & n2[i]){ return document.getElementById("convertido").value =("Valor não binário"); }
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1){
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Binários";
+                }
             }
+
             return document.getElementById("convertido").value = n1;
 
         }
 
         else if(tipo_base == 8){
 
-            const test = ~0x01
-            for(var i=n2.length-1; i>=0; --i){
-                if(test & n2[i]){ return document.getElementById("convertido").value =("Valor não binário"); }
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1){
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Binários";
+                }
             }
+
             n2=parseInt(n2,2);
             return document.getElementById("convertido").value = n2.toString(8);
 
@@ -176,10 +180,12 @@ function convert(){
 
         else if(tipo_base == 10){
 
-            const test = ~0x01
-            for(var i=n2.length-1; i>=0; --i){
-                if(test & n2[i]){ return document.getElementById("convertido").value =("Valor não binário"); }
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1){
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Binários";
+                }
             }
+
             n2=parseInt(n2,2);
             return document.getElementById("convertido").value = n2.toString(10);
 
@@ -187,10 +193,12 @@ function convert(){
 
         else if(tipo_base == 16){
 
-            const test = ~0x01
-            for(var i=n2.length-1; i>=0; --i){
-                if(test & n2[i]){ return document.getElementById("convertido").value =("Valor não binário"); }
+            for(var i = n2.length-1; i>= 0; i--){
+                if(n2[i] != 0 && n2[i] != 1){
+                    return document.getElementById("convertido").value = "ERRO: Valor Não Binários";
+                }
             }
+            
             n2=parseInt(n2,2);
             return document.getElementById("convertido").value = n2.toString(16).toUpperCase();
 
